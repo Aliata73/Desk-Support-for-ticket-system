@@ -1,0 +1,4 @@
+NODE_ENV = development
+PORT = 5000
+MONGO_URI = mongodb+srv://username:password@YOURcluster.drarzvd.mongodb.net/testdb?retryWrites=true&w=majority&appName=YOURCluster
+JWT_SECRET = YOUR_JWT_SECRET_KEY
