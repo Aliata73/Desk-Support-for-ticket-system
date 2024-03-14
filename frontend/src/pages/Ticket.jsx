@@ -28,14 +28,13 @@ Modal.setAppElement("#root");
 function Ticket() {
   const [modelIsOpen, setModalIsOpen] = useState(false);
   const [noteText, setNoteText] = useState("");
-  const { ticket, isLoading, isSuccess, isError, message } = useSelector(
+  const { ticket, isLoading, isError, message } = useSelector(
     (state) => state.tickets
   );
   const { notes, isLoading: notesIsLoading } = useSelector(
     (state) => state.notes
   );
 
-  const params = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { ticketId } = useParams();
@@ -130,6 +129,7 @@ function Ticket() {
             </div>
           </form>
         </Modal>
+        
         {notes.map((note) => (
           <NoteItem key={note._id} note={note} />
         ))}
